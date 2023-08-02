@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes , Route} from 'react-router-dom';
+import Plan from './Pages/Plan';
+import PlanForm from './Pages/PlanForm';
+import FirstPage from './Pages/FirstPage';
+import ChoosePlan from './Pages/ChoosePlan';
+import ChoosePlan2 from './Pages/ChoosePlan2';
+import ChoosePlan3 from './Pages/ChoosePlan3';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+
+
+<Routes>
+
+  <Route  path='/' element={<FirstPage/>} />
+ 
+ <Route path='/plan' element={<Plan/>} />
+
+ <Route path='/planForm' element={<PlanForm/>} />
+<Route path='/ChoosePlan' element={<ChoosePlan/>}/>
+<Route path='/ChoosePlan2' element={<ChoosePlan2/>}/>
+<Route path='/ChoosePlan3' element={<ChoosePlan3/>}/>
+</Routes>
+
+
   );
 }
 
